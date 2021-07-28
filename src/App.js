@@ -42,6 +42,9 @@ class App extends Component {
   showHtml(x) {
     this.setState({ html: x }, this.getSampleText);
   }
+  changeParas(number) {
+    this.setState({ paras: number }, this.getSampleText);
+  }
 
   render() {
     return (
