@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import Output from "./components/Output";
 import Select from "./components/controls/Select";
+import Text from "./components/controls/Text";
 
 class App extends Component {
   constructor(props) {
@@ -53,6 +54,13 @@ class App extends Component {
             <Select
               value={this.state.html}
               onChange={this.showHtml.bind(this)}
+            />
+          </div>
+          <div className="form-group">
+            <label>Paragraphs:</label>
+            <Text
+              value={this.state.paras}
+              onChange={this.changeParas.bind(this)}
             />
           </div>
         </form>
