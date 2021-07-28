@@ -8,7 +8,7 @@ class App extends Component {
 
     this.state = {
       paras: 4,
-      html: true,
+      html: "html",
       text: "",
     };
   }
@@ -20,13 +20,14 @@ class App extends Component {
   getSampleText() {
     axios
       .get(
-        "http://hipsterjesus.com/api?paras=" +
+        "https://baconipsum.com/api/?type=meat-and-filler&paras=" +
           this.state.paras +
-          "&html=" +
+          "&format=" +
           this.state.html
       )
       .then((response) => {
-        this.setState({ text: response.data.text }, function () {
+        console.log(response.data);
+        this.setState({ text: response.data }, function () {
           console.log(this.state);
         });
       })
