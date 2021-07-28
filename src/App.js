@@ -38,6 +38,10 @@ class App extends Component {
       });
   }
 
+  showHtml(x) {
+    this.setState({ html: x }, this.getSampleText);
+  }
+
   render() {
     return (
       <div className="App container">
