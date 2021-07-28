@@ -9,7 +9,7 @@ class Output extends Component {
   }
 
   render() {
-    return <div className="output">{this.props.value}</div>;
+    return <div className="card output">{this.props.value}</div>;
   }
 }
 
